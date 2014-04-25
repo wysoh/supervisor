@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" id="top" xmlns="http://www.w3.org/1999/xhtml" ng-app="allyes">
+<head>
+    <% if(title){ %>
+    <title><%= title %></title>
+    <% }else{ %>
+    <title><%-blocks.title%></title>
+    <% } %>
+
+    <% include ../common/header_js %>
+    <% include ../common/header_css %>
+
+    <style>
+
+        .break{clear:both}
+        .tab-container {width: 100%}
+        .tab-bar {height:30px;  margin:0px; font-size:16px; color:#000}
+        li {display: list-item}
+
+        ul.tabs {list-style-type: none; margin:0px}
+        ul.tabs li {font-size: 16px; float:left; cursor: pointer; border: 1px solid #A8AAAC; border-bottom: 0px solid #fff; width:200px; text-align: center;
+            line-height: 30px; height: 30px; margin-top: 0px; background-color: #d2d3d4; color:#000; font-weight: bold;}
+        ul.tabs li.active {background-color: #fff; color:#000; opacity: 1; padding-top:1px; line-height: 30px}
+
+
+        .second-tab-bar {height:30px; border-bottom: 1px solid #A8AAAC; margin:0px; font-size:16px; color:#000}
+        ul.second-tabs {list-style-type: none; margin:0px}
+        ul.second-tabs  li.active {background-color: #fff; color:#000; opacity: 1; padding-top:1px; line-height: 30px}
+        ul.second-tabs  li {font-size: 16px; float:left; cursor: pointer; border: 1px solid #A8AAAC; border-bottom: 0px solid #fff; width:160px; text-align: center;
+            line-height: 30px; height: 30px; margin-top: 0px; background-color: #f2f3f4; color:#000; font-weight: bold}
+
+
+        .tab-body{border: 1px solid #A8AAAC; border-top: 0px; padding-bottom: 8px; padding-top: 1px; }
+
+    </style>
+
+
+</head>
+<!--<body class="ng-cloak" ng-cloak>-->
+<body ng-controller="BasePageCtrl">
+
+<div style="padding: 0px 16px 0px 16px" >
+
+    <div>
+        <!--div>< % -body -%></div-->
+
+
+        <script src="/libs/d3/d3.v3.js"></script>
+        <script src="/libs/d3/nv.d3.js"></script>
+
+
+        <script>
+            var chartId = 'chart';
+            var selectedServerGroup, selectedServerInstance;
+        </script>
+
+        <script src="/js/streaming.js"></script>
+
+        <link href="/css/nv.d3.css" rel="stylesheet" type="text/css">
+
+
+        <div class="tab-container" ng-init="fn.initTabs()">
+            <div class="tab-bar">
+                <ul class="tabs">
+                    <li ng-repeat="m in vm.tabs.tabItems" ng-class="{'active':m.selected, 'disabled':m.disabled}" ng-click="fn.selectTab(m)" >
+                        {{m.title}}
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="break"></div>
+
+
+            <div class="second-tab-bar">
+                <ul class="second-tabs">
+                    <li ng-repeat="m in vm.secondTabs.tabItems" ng-class="{'active':m.selected, 'disabled':m.disabled}" ng-click="fn.selectSecondTab(m)" >
+                        {{m.title}}
+                    </li>
+
+                </ul>
+            </div>
+
+
+            <div class="break"></div>
+
+
+            <div id='chart' class='chart half with-transitions'>
+                <svg style="height:350px"></svg>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <div class="footer">
+        <!--div class="link">< % include ./footer % ></div-->
+        <div class="copyright hidden"></div>
+    </div>
+</div>
+</body>
+</html>

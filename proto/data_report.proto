@@ -1,0 +1,22 @@
+message error_message_t
+{
+	required int32 error_code=1;
+	required int32 num=2;
+}
+
+message dsp_message_t
+{
+	required string dsp_id=1;
+	optional int32 qps=2;
+	repeated error_message_t error_message=3;
+}
+
+message report_t
+{
+	required int32 timestamp=1;
+	required string server_group=2;
+	required string server_id=3;
+	optional int32 qps=4;
+	optional int32 timeout=5;
+	repeated dsp_message_t dsp_message=6;
+}

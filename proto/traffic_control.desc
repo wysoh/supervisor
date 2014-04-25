@@ -1,0 +1,13 @@
+
+Î
+traffic_control.proto"]
+traffic_control_data_tC
+server_traffic_control_data (2.server_traffic_control_data_t"Œ
+server_traffic_control_data_t
+	server_id (	
+	threshold (E
+adspace_traffic_control_data (2.adspace_traffic_control_data_t"G
+adspace_traffic_control_data_t
+
+adspace_id (	
+	threshold (

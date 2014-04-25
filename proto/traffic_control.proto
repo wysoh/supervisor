@@ -1,0 +1,17 @@
+
+message traffic_control_data_t
+{
+	repeated server_traffic_control_data_t server_traffic_control_data=1;
+}
+
+message server_traffic_control_data_t
+{
+    required string server_id=1;
+    required int32 threshold=2;
+    repeated adspace_traffic_control_data_t adspace_traffic_control_data=3;
+}
+message adspace_traffic_control_data_t
+{
+    required string adspace_id=1;
+	required int32 threshold=2;
+}

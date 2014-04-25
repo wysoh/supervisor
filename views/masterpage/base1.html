@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" id="top" xmlns="http://www.w3.org/1999/xhtml" ng-app="ni">
+<head>
+    <% if(title){ %>
+    <title><%= title %></title>
+    <% }else{ %>
+    <title><%-blocks.title%></title>
+    <% } %>
+
+    <% include ../common/header_js %>
+    <% include ../common/header_css %>
+
+</head>
+<!--<body class="ng-cloak" ng-cloak>-->
+<body ng-controller="BasePageCtrl">
+
+<div ng-class="{true: 'whole', false: 'whole nomenu'}[gvm.isShowLeftMenu]" style="" >
+
+    <div>
+        <div><%-body -%></div>
+
+    </div>
+
+    <div class="footer">
+        <div class="link"><% include ./footer %></div>
+        <div class="copyright hidden"></div>
+    </div>
+</div>
+</body>
+</html>

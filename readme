@@ -1,0 +1,2 @@
+sudo ln -s /usr/local/protobuf-2.4.1/include/google/ /usr/local/include/google
+
