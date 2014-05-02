@@ -8,52 +8,51 @@
 
 
 var amqp = require('amqp');
-var events = require('events');
+var util = require('util');
+var conf = require('../config').config;
+var EventEmitter = require('events').EventEmitter;
 
 
 module.exports = (function(){
-    var connection;
-    var exchange;
-    var isExchangeReady = false;
-    var eventEmitter = new events.EventEmitter();
-
-
     var publisher = function(){
+        EventEmitter.call(this);
+        this.isReady = false;
     };
 
-    publisher.prototype.init = function(exchange_name, type){
-        connection = amqp.createConnection({host: 'localhost'});
-        connection.on('ready', function(){
-            connection.exchange(exchange_name, {type:type?type:'direct'}, function(ex){
-                if (isExchangeReady) return;
-                isExchangeReady = true;
-                exchange = ex;
-                console.log('Exchange: ' + exchange.name + ' is open');
-                eventEmitter.emit('exchangeReady');
-            });
+    util.inherits(publisher, EventEmitter);
 
+
+    publisher.prototype.init = function(exchange_name, type){
+        var self = this;
+        self.connection = amqp.createConnection({host: conf.rabbit.host}, null, function(){
+            self.emit('connectionReady');
+        });
+
+        self.on('connectionReady', function(){
+            self.connection.exchange(exchange_name, {type:type?type:'direct'}, function(ex){
+                self.emit('exchangeReady', ex);
+            })
+        });
+
+        self.on('exchangeReady', function(ex){
+            self.exchange = ex;
+            this.isReady = true;
+            logs.debug('Publisher for exchange: ' + self.exchange.name + ' is open.');
         });
     }
 
     publisher.prototype.publish = function(routingKey, data){
-        if(isExchangeReady)
+        if(this.isReady)
         {
-            //console.log('publish after ready');
-            _doPublish(routingKey, data);
+            this.exchange.publish(routingKey, data);
         }
         else
         {
-            eventEmitter.on('exchangeReady', function(){
-                    _doPublish(routingKey, data);
-                }
-            );
+            this.on('exchangeReady', function(){
+                this.exchange.publish(routingKey, data);
+            })
         }
     }
-
-    _doPublish =  function(routingKey, data){
-        exchange.publish(routingKey, data);
-    }
-
 
     return publisher;
 })();

@@ -7,6 +7,7 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var routes = require("./routes");
+var logger = require('./framework/logger');
 
 
 expressExt = require('./framework/express.ext/express.extend');
@@ -36,44 +37,32 @@ if ('development' == app.get('env')) {
 
 routes(app);
 
-/*
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
-});
-*/
-
-var winston = require('winston');
-winston.level = 'info';
-
+global.logs = logger.logger;
 
 var server = http.createServer(app),
     io = require('socket.io').listen(server);
+io.set('log level', 2); //by default socket.io is too noisy
 
 server.listen(app.get('port'), function(){
    console.log('Express server listening on port ' + app.get('port'));
 });
 
+var streamer = require('./controllers/streamer');
+new streamer().run(io);
+
+
 var events = require('events');
-rabbitEventEmitter = new events.EventEmitter();
-
-
-io.sockets.on('connection', function(socket){
-    rabbitEventEmitter.on('update', function(data){
-       socket.emit("update", data);
-    });
-    //socket.emit('report', {hello: 'world'});
-    /*
-    socket.on('my other event', function(data){
-        console.log(data);
-    });
-    */
-});
+eventEmitter = new events.EventEmitter();
 
 var simulator = require('./controllers/simulator');
-var s =  new simulator();
-s.run();
+new simulator().run();
+
+var monitorController = require('./controllers/monitor');
+new monitorController().run();
+
+var trafficControl = require('./controllers/trafficControl');
+new trafficControl().run();
 
 
-var monitor = require('./controllers/monitor');
-new monitor().run();
+
 

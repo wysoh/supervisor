@@ -127,6 +127,17 @@ angular.module('allyes.services',[])
                     .error(function(data){
                         error(data);
                     })
+            },
+
+            setTargetQps: function(data, success, error){
+                commonAPIService.setTargetQps(data)
+                    .success(function(rst){
+                        success(rst);
+                    })
+                    .error(function(data){
+                        error(data);
+                    })
+
             }
 
         }

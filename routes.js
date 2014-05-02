@@ -16,6 +16,7 @@ module.exports = function(app){
     //app.post('/api/common/test', commonController.apis.get_data);
     app.post('/api/common/getServerNodes', commonController.apis.getServerNodes);
     app.post('/api/common/getHistoryDataByNode', commonController.apis.getHistoryDataByNode);
+    app.post('/api/common/setTargetQps', commonController.apis.setTargetQps);
 
 
 }

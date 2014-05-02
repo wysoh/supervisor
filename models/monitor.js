@@ -19,7 +19,7 @@ data  = {
     {dispatcher1:
     {qps: [{ts: 345, value: 456}] } },
 
-    dspclient:
+    dsp:
     {winmax:
     {qps:[],
         errors:{"2027":[]}
@@ -33,7 +33,7 @@ data  = {
 var data = {
     server:{},
     dispatcher: {},
-    dspclient: {}
+    dsp: {}
 
 };
 
@@ -43,9 +43,9 @@ var _ = require('underscore');
 
 module.exports = (function(){
 
-    var monitorData = function(){};
+    var monitor = function(){};
 
-    monitorData.prototype.addData = function(tick){
+    monitor.prototype.addData = function(tick){
         //data is in raw format after being deserialized
         var ts = new Date(tick.timestamp * 1000);
         //round down to the minute
@@ -57,7 +57,7 @@ module.exports = (function(){
         var entry;
         if (sg == 'dspclient'){
             _.each(tick.dspMessage, function(v, i){
-                entry = initEmptyServerEntry(sg, v.dspId);
+                entry = initEmptyServerEntry('dsp', v.dspId);
 
                 if (_.isEmpty(entry.errors)){
                     entry.errors = {};
@@ -79,8 +79,8 @@ module.exports = (function(){
 
             var ret = [];
             _.each(tick.dspMessage, function(v, i){
-                var dsp = data.dspclient[v.dspId];
-                var t = {sg:sg, si: v.dspId, QPS: convertToFEData([dsp.qps[dsp.qps.length-1]])[0]};
+                var dsp = data.dsp[v.dspId];
+                var t = {sg:'dsp', si: v.dspId, QPS: convertToFEData([dsp.qps[dsp.qps.length-1]])[0]};
                 _.each(Object.keys(dsp.errors), function(v, i){
                     t[v] =  convertToFEData([dsp.errors[v][dsp.errors[v].length-1]])[0];
                 });
@@ -102,13 +102,13 @@ module.exports = (function(){
 
     };
 
-    monitorData.prototype.getHistoryData = function(sg, si){
+    monitor.prototype.getHistoryData = function(sg, si){
         //return data in this format so that the frontend can show it in the chart
         //[{key:"APPL", values: [{x:1396948011,y:5}, {x:1396948012, y:5.1}, {x:1396948013, y:5.3}]}]
 
         var ret = [];
         var raw = data[sg][si];
-        if (sg == "dspclient"){
+        if (sg == "dsp"){
             ret.push({key:"QPS", values: convertToFEData(raw.qps)});
             _.each(Object.keys(raw.errors), function(v, i){
                 ret.push({key:v, values: convertToFEData(raw.errors[v])});
@@ -124,7 +124,7 @@ module.exports = (function(){
     }
 
 
-    initEmptyServerEntry = function(sg, server){
+    var initEmptyServerEntry = function(sg, server){
 
         var entry = data[sg][server];
 
@@ -136,7 +136,7 @@ module.exports = (function(){
         return entry;
     }
 
-    updateValueByTimestamp = function(entry, key, ts, val){
+    var updateValueByTimestamp = function(entry, key, ts, val){
         var item = _.find(entry[key], function(v, i){
             return v.ts == ts;
         });
@@ -144,8 +144,8 @@ module.exports = (function(){
         if (_.isEmpty(item)){
             entry[key].push({ts: ts, value: val});
 
-            //only keep 200 entries (about 3 hours worth of data). we might consider to persist the historical data into something like mongoDB
-            if (entry[key].length > 10){
+            //only keep 300 entries (about 3 hours worth of data). we might consider to persist the historical data into something like mongoDB
+            if (entry[key].length > 300){
                 entry[key].shift();
             }
         }else{
@@ -156,7 +156,8 @@ module.exports = (function(){
 
     }
 
-    convertToFEData = function(rawCol){
+    var convertToFEData = function(rawCol){
+
         //rawCol is in the following format: [{ts:123, value:456}]
         //return to this format: [{x:123, y:456}]
 
@@ -169,7 +170,7 @@ module.exports = (function(){
 
     }
 
-    return monitorData;
+    return monitor;
 
 
 })()

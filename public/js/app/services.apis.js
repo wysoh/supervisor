@@ -37,6 +37,14 @@ angular.module('allyes.services.apis',[])
 
                 return ajax.post(ops, srcOps);
 
+            },
+
+            setTargetQps: function(data, ops){
+                var srcOps = {
+                    url: '/api/common/setTargetQps',
+                    data: data
+                };
+                return ajax.post(ops, srcOps);
             }
 
 

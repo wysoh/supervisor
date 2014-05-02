@@ -10,7 +10,8 @@
 var consumer = require('../controllers/consumer');
 var dataReport = require('../models/dataReport');
 var serverNodes = require('../models/serverNodes');
-var monitorData = require('../models/monitorData');
+var monitorModel = require('../models/monitor');
+var trafficControlModel = require('../models/trafficControl');
 var _ = require('underscore');
 
 module.exports = (function(){
@@ -21,8 +22,7 @@ module.exports = (function(){
         var c = new consumer();
         var report = new dataReport();
         var nodes = new serverNodes();
-        var monitor = new monitorData();
-
+        var monitorModelData = new monitorModel();
 
         c.init('monitor_ex');
         c.setupQueue('monitor', '',{autoDelete:false});
@@ -30,18 +30,16 @@ module.exports = (function(){
         c.consume(function(message){
             var data = report.fromProto(message.data);
             nodes.addNode(data);
-            var update = monitor.addData(data);
 
+            //returns the current data
+            var update = monitorModelData.addData(data);
 
             _.each(update, function(v, i){
-                rabbitEventEmitter.emit('update', v);
+                eventEmitter.emit('update', v);
             });
-
-
-            //console.log('received: ' + JSON.stringify(report.fromProto(message.data)));
         });
+    };
 
-    }
 
 
     return monitor;

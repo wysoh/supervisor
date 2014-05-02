@@ -32,6 +32,13 @@
 
         .tab-body{border: 1px solid #A8AAAC; border-top: 0px; padding-bottom: 8px; padding-top: 1px; }
 
+        .label{width: 200px; display:inline-block;}
+
+        .hidden{display:none}
+
+        #controlHistory{border:1px solid #A8AAAC;}
+        #controlHistory tr{border: 1px solid blue;}
+
     </style>
 
 
@@ -54,7 +61,7 @@
             var selectedServerGroup, selectedServerInstance;
         </script>
 
-        <script src="/js/streaming.js"></script>
+        <script src="/js/chart.js"></script>
 
         <link href="/css/nv.d3.css" rel="stylesheet" type="text/css">
 
@@ -81,16 +88,48 @@
                 </ul>
             </div>
 
-
             <div class="break"></div>
-
 
             <div id='chart' class='chart half with-transitions'>
                 <svg style="height:350px"></svg>
             </div>
+        </div>
 
+
+        <div style="display:inline-block; width:400px;">
+            <div><span class="label">当前QPS:</span>{{vm.currentQps}}</div>
+            <div><span class="label">当前流控系数:</span> {{vm.currentRatio}}</div>
+
+            <div ng-show="vm.selectedServerGroup=='dsp'"><span class="label">{{vm.dspErrorCodes.join(' + ')}}:</span>
+                {{vm.currentDSPError}}</div>
+
+            <div><span class="label">极限QPS:</span> <input ng-disabled="vm.selectedServerGroup=='dispatcher'" ng-model="vm.targetQps"/></div>
+
+            <div class="hidden"><span class="label">手工设置流控系数:</span>
+                <input ng-model="vm.manualRatio"/></div>
+
+            <input type="button" style="width:150px" ng-click="fn.setTargetQps()"
+                   ng-disabled="vm.selectedServerGroup=='dispatcher'"  value="更新"/>
+            <input class="hidden" type="button" ng-disabled="!vm.hasManualRatio" ng-click="fn.setManualRatio()" value="取消手工设置"/>
 
         </div>
+
+        <div style="display:inline-block; width:400px; vertical-align: top; margin-left: 40px">
+            <table id="controlHistory" style="width:100%">
+                <thead>
+                <tr><th style="width:160px">时间</th><th style="width:80px">流控系数</th><th style="width:80px">QPS</th><th style="width:80px">错误</th></tr>
+                </thead>
+                <tr ng-repeat="m in vm.controlHistory">
+                    <td>{{fn.formatTime(m.ts)}}</td>
+                    <td style="padding-left:20px">{{m.ratio}}</td>
+                    <td style="padding-left:15px">{{m.qps}}</td>
+                    <td style="padding-left:25px">{{m.timeout}}</td>
+                </tr>
+
+            </table>
+
+        </div>
+
 
 
     </div>

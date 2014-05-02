@@ -8,9 +8,8 @@ var winston=require('winston');
 exports.config = {
     env: 'dev',
     port: 3000,
-
-
-    debug: true
+    debug: true,
+    rabbit: {host: 'localhost'}
 };
 
 exports.config.log_setting = {

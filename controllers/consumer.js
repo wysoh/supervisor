@@ -7,64 +7,56 @@
  */
 
 var amqp = require('amqp');
-var events = require('events');
+var util = require('util');
+var conf = require('../config').config;
+var EventEmitter = require('events').EventEmitter;
 
 
 module.exports = (function(){
-    var connection;
-    var exchange;
-    var isExchangeReady = false;
-    var eventEmitter = new events.EventEmitter();
-    var queue;
 
     var consumer = function(){
-
+        EventEmitter.call(this);
+        //this.isExchangeReady = false;
     };
+
+    util.inherits(consumer, EventEmitter);
 
     consumer.prototype.init = function(exchange_name, type){
-        connection = amqp.createConnection({host: 'localhost'});
-        connection.on('ready', function(){
-            connection.exchange(exchange_name, {type:type?type:'direct'}, function(ex){
-                if (isExchangeReady) return;
-                isExchangeReady = true;
-                exchange = ex;
-                console.log('Exchange: ' + exchange.name + ' is open');
-                eventEmitter.emit('exchangeReady');
-            });
 
+        var self = this;
+        self.connection = amqp.createConnection({host: conf.rabbit.host}, null, function(){
+            self.emit('connectionReady');
         });
+
+        self.on('connectionReady', function(){
+            self.connection.exchange(exchange_name, {type:type?type:'direct'}, function(ex){
+                self.emit('exchangeReady', ex);
+            })
+        });
+
+        self.on('exchangeReady', function(ex){
+            self.exchange = ex;
+            //self.isExchangeReady = true;
+            logs.debug('Consumer for exchange: ' + self.exchange.name + ' is open.');
+        })
     }
 
-
     consumer.prototype.setupQueue = function(queueName, routingKey, options){
-        eventEmitter.on('exchangeReady', function(){
-            queue = connection.queue(queueName, options);
-            queue.bind(exchange.name, routingKey);
-            eventEmitter.emit('queueReady');
-
+        this.on('exchangeReady', function(){
+            this.queue = this.connection.queue(queueName, options);
+            this.queue.bind(this.exchange.name, routingKey);
+            this.emit('queueReady');
         })
     };
-
 
     consumer.prototype.consume = function(callback){
-        if(queue){
-            _doConsume(callback);
-        }
-        else{
-            eventEmitter.on('queueReady', function(){
-                _doConsume(callback);
+        this.on('queueReady', function(){
+            this.queue.subscribe(function(message, headers, deliveryInfo, messageObject){
+                callback(message);
             })
-
-        }
-    };
-
-    _doConsume = function(callback){
-        queue.subscribe(function(message, headers, deliveryInfo, messageObject){
-            callback(message);
         })
 
     };
-
 
     return consumer;
 

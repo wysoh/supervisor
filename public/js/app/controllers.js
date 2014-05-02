@@ -15,7 +15,13 @@ angular.module('allyes.controllers.common', []).
             var vm = $scope.vm = {};
             var fn = $scope.fn = {};
 
+
             vm.serverNodes = {};
+            vm.hasManualRatio = false;
+            vm.dspErrorCodes = ["1000", "2022", "2027", "2028"];
+            vm.controlHistory = [];
+
+            vm.manualRatio = 100;
 
             fn.get_api = function(){
                 commonService.get_data(
@@ -28,37 +34,36 @@ angular.module('allyes.controllers.common', []).
                 )
             };
 
-
             fn.initTabs = function(){
                 commonService.getServerNodes(
                     function(rst){
 
                         vm.serverNodes.server = rst.data.server;
                         vm.serverNodes.dispatcher = rst.data.dispatcher;
-                        vm.serverNodes.dspclient = rst.data.dspclient;
+                        vm.serverNodes.dsp = rst.data.dsp;
 
                         vm.tabs = VX.UI.tabs.build([
                             {code:"server", title: "Servers", selected:true, nodes: vm.serverNodes.server},
                             {code:"dispatcher", title: "Dispatchers", nodes: vm.serverNodes.dispatcher},
-                            {code:"dspclient", title: "DSP Clients", nodes: vm.serverNodes.dspclient}
+                            {code:"dsp", title: "DSP Clients", nodes: vm.serverNodes.dsp}
                         ]);
 
                         vm.tabs.afterSelect = function(code){
                             $rootScope.$broadcast('TAB_CLICK', {tab: code });
                         };
 
-                        selectedTab = vm.tabs.tabItems[0].code;
+                        vm.selectedServerGroup = vm.tabs.tabItems[0].code;
                         fn.buildSecondTabs(vm.tabs.tabItems[0].nodes);
-                        selectedSecondTab = vm.secondTabs.tabItems[0].code;
+                        vm.selectedServerInstance = vm.secondTabs.tabItems[0].code;
 
                         fn.initChart();
+                        fn.initStreaming();
+
                     }
+                );
 
-                    //function(data){console.log('error:' + data);}
 
-                )
-
-            }
+            };
 
             fn.buildSecondTabs = function(items){
                 var tabs = [];
@@ -73,37 +78,128 @@ angular.module('allyes.controllers.common', []).
                 vm.secondTabs.afterSelect = function(code){
                     $rootScope.$broadcast('TAB_CLICK', {tab: code });
                 };
-            },
+            };
 
             fn.selectTab = function(tabItem){
                 tabItem.onSelect();
-                selectedTab = tabItem.code;
+                vm.selectedServerGroup = tabItem.code;
                 fn.buildSecondTabs(tabItem.nodes);
-                selectedSecondTab = vm.secondTabs.tabItems[0].code;
+                vm.selectedServerInstance = vm.secondTabs.tabItems[0].code;
                 fn.initChart();
-                //console.log(tab_item);
-
-            },
+            };
 
             fn.selectSecondTab = function(tabItem){
                 tabItem.onSelect();
-                selectedSecondTab = tabItem.code;
+                vm.selectedServerInstance = tabItem.code;
                 fn.initChart();
-            },
+            };
 
             fn.initChart = function(){
+                vm.currentDSPError = '';
+                vm.currentQps = '';
+                vm.currentRatio = '';
+                vm.controlHistory.length = 0;
 
-                commonService.getHistoryDataByNode({sg: selectedTab, si: selectedSecondTab},
+                commonService.getHistoryDataByNode({sg: vm.selectedServerGroup, si: vm.selectedServerInstance},
                     function(rst){
+                        vm.currentQps = rst.data.control.qps;
+                        vm.currentRatio = rst.data.control.ratio;
+                        vm.targetQps = rst.data.control.targetQps;
+
                         chartData.length = 0;
-                        updateChart(rst.data);
+                        updateChart(rst.data.monitor);
                     },
                     function(error){
                         console.log('error' + error);
                     }
                 )
-            }
+            };
 
+            fn.initStreaming = function(){
+                var socket = io.connect('/');
+                socket.on("update", function (update) {
+                    if (!(vm.selectedServerGroup == update.sg && vm.selectedServerInstance == update.si)){
+                        return;
+                    }
+
+                    $.each(chartData, function(i, v){
+                        var series = v.key;
+                        var lastEntry = v.values[v.values.length-1];
+
+                        var tick = update[series];
+                        if (lastEntry.x == tick.x){
+                            lastEntry.y = tick.y;
+                        }else{
+                            v.values.push(tick);
+                            //only keep the last 300 entries, about 5 hours worth of data
+                            if (v.values.length > 300) {
+                                v.values.shift();
+                            }
+                        };
+                    });
+
+                    vm.currentQps = update.QPS.y;
+                    $scope.$apply();
+                    chart.update();
+                    fn.updateDSPError();
+                });
+
+                socket.on('control', function(control){
+                    if (!(vm.selectedServerGroup == control.sg && vm.selectedServerInstance == control.si)){
+                        return;
+                    }
+
+                    console.log(control);
+                    vm.currentRatio = control.ratio;
+                    vm.controlHistory.push(control);
+                    if (vm.controlHistory.length > 10){
+                        vm.controlHistory.shift();
+                    }
+                    $scope.$apply();
+
+                });
+            };
+
+            fn.updateDSPError = function(){
+                vm.currentDSPError = 0;
+                if(vm.selectedServerGroup == 'dsp'){
+                    $.each(chartData, function(i, v){
+                        $.each(vm.dspErrorCodes, function(j, w){
+                            if (v.key == w){
+                                vm.currentDSPError += v.values[v.values.length-1].y;
+                            }
+                        })
+                    });
+
+                    $scope.$apply();
+                }
+
+            };
+
+            fn.setTargetQps = function(){
+                //we should get a validation framework ie. angular validation
+                if (isNaN(vm.targetQps)){
+                    alert('请输入极限QPS的数值');
+                    return;
+                }
+                commonService.setTargetQps({sg: vm.selectedServerGroup, si: vm.selectedServerInstance, qps: vm.targetQps},
+                    function(rst){
+                        alert('更新成功!');
+                    },
+                    function(error){
+                        console.log('error' + error);
+                    }
+                )
+            };
+
+            fn.formatTime = function(ts){
+                var d = new Date(ts * 1000);
+                var month = d.getMonth() < 9 ? '0' + (d.getMonth() + 1) : (d.getMonth() + 1);
+
+                return d.getFullYear() + '-' + month  + '-' + d.getDate() + ' ' +
+                    d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
+
+            }
 
 
         }])

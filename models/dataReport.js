@@ -31,6 +31,7 @@ module.exports = (function(){
     dataReport.prototype.getSample = function(){
         var serverGroups = ['server', 'dispatcher', 'dspclient'];
         var dsps = ['winmax', 'mediav', 'hdt', 'wisemedia'];
+        var errorcodes = ["1000", "2022", "2027", "2028"];
 
         var sg = serverGroups[Math.floor(Math.random() * 100) % 3];
         var si = sg + Math.floor(Math.random() * 5) + "-" + Math.floor(Math.random() * 5);
@@ -47,15 +48,15 @@ module.exports = (function(){
                 {dspId: dsp,
                     qps: Math.floor(Math.random()* 5000),
                     errorMessage:[
-                        {errorCode: 2027, num:234},
-                        {errorCode: 2021, num: 456}
+                        {errorCode: errorcodes[Math.floor(Math.random() * 100) % 4], num:234},
+                        {errorCode: errorcodes[Math.floor(Math.random() * 100) % 4], num: 456}
                     ]
                 },
                 {dspId: dsps[Math.floor(Math.random() * 100) % 4],
                     qps: Math.floor(Math.random()* 5000),
                     errorMessage:[
-                        {errorCode: 2027, num:234},
-                        {errorCode: 2021, num: 456}
+                        {errorCode: errorcodes[Math.floor(Math.random() * 100) % 4], num:234},
+                        {errorCode: errorcodes[Math.floor(Math.random() * 100) % 4], num: 456}
                     ]
                 }
             ]

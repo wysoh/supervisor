@@ -8,6 +8,9 @@
 
 var publisher = require('./publisher');
 var dataReport = require('../models/dataReport');
+var consumer = require('../controllers/consumer');
+var trafficControlModel = require('../models/trafficControl');
+
 
 module.exports = (function(){
     var simulator = function(){
@@ -22,10 +25,18 @@ module.exports = (function(){
 
         doRun(pub, report);
 
+        var c = new consumer();
+        c.init('traffic_control_ex', 'topic');
+        c.setupQueue('test', '#', {autodelete: false});
+        var trafficControlData = new trafficControlModel();
+
+        c.consume(function(message){
+            var data = trafficControlData.fromProto(message.data);
+            logs.debug('receive traffic control data: ' + JSON.stringify(data));
+        })
     };
 
-
-    doRun = function(pub, report){
+    var doRun = function(pub, report){
         setTimeout(function(){
                 pub.publish("", report.toProto(report.getSample()));
                 doRun(pub, report);

@@ -7,7 +7,7 @@
  */
 
 
-var nodes = {};
+var nodes = {server:[], dispatcher:[], dsp:[]};
 var _ = require('underscore');
 
 module.exports= (function(){
@@ -19,15 +19,11 @@ module.exports= (function(){
         var group = data.serverGroup;
         var node = data.serverId;
 
-        if (_.isEmpty(nodes[group])){
-            nodes[group] = [];
-        }
-
         if (group == 'dspclient'){
             _.each(data.dspMessage, function(v, i){
                 var server = v.dspId;
-                if (!_.contains(nodes[group], server)) {
-                    nodes[group].push(server);
+                if (!_.contains(nodes.dsp, server)) {
+                    nodes.dsp.push(server);
                 }
             });
 
@@ -38,31 +34,19 @@ module.exports= (function(){
             }
 
         }
-
-
-
     };
 
     serverNodes.prototype.getAllNodes = function(){
         return nodes;
-
-
     };
-
-
 
     serverNodes.prototype.getGroups = function() {
         return Object.keys(nodes);
-
     }
 
     serverNodes.prototype.getNodesByGroup = function(group){
-
         return nodes.group;
     };
 
-
-
     return serverNodes;
-
 })()

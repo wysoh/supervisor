@@ -1,25 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" name="Default" comment="" />
+    <list default="true" id="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/chart.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/framework/logger.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/streamer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/trafficControl.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/models/monitorData.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/streaming.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/masterpage/base1.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/masterpage/base.html" afterPath="$PROJECT_DIR$/views/masterpage/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/common.js" afterPath="$PROJECT_DIR$/controllers/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.js" afterPath="$PROJECT_DIR$/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/consumer.js" afterPath="$PROJECT_DIR$/controllers/consumer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app/controllers.js" afterPath="$PROJECT_DIR$/public/js/app/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/dataReport.js" afterPath="$PROJECT_DIR$/models/dataReport.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/monitor.js" afterPath="$PROJECT_DIR$/controllers/monitor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/publisher.js" afterPath="$PROJECT_DIR$/controllers/publisher.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes.js" afterPath="$PROJECT_DIR$/routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/serverNodes.js" afterPath="$PROJECT_DIR$/models/serverNodes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app/services.apis.js" afterPath="$PROJECT_DIR$/public/js/app/services.apis.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app/services.js" afterPath="$PROJECT_DIR$/public/js/app/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/simulator.js" afterPath="$PROJECT_DIR$/controllers/simulator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/trafficControl.js" afterPath="$PROJECT_DIR$/models/trafficControl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="supervisor.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/package.json" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1396907966245" ignored="false" />
-    <file path="/app.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397988358603" ignored="false" />
-    <file path="/a.dummy" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398271026499" ignored="false" />
-    <file path="/Dummy.txt" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398358793085" ignored="false" />
+    <file path="/app.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1399034091026" ignored="false" />
+    <file path="/a.dummy" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1399034234859" ignored="false" />
+    <file path="/Dummy.txt" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1399033193241" ignored="false" />
     <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/resources/filters/dataaccess-aws.properties" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1396789182292" ignored="false" />
-    <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/public/tpl/auth/confirmed-member.html" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1396847370334" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/public/tpl/auth/confirmed-member.html" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398956506808" ignored="false" />
     <file path="/readme" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1396850580502" ignored="false" />
-    <file path="/fragment.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398353901686" ignored="false" />
+    <file path="/fragment.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1399034153937" ignored="false" />
     <file path="/data_report.proto" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1396861452050" ignored="false" />
     <file path="/feeds.proto" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1396857701612" ignored="false" />
     <file path="/report_data.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1396865970786" ignored="false" />
-    <file path="/dataReport.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1396871604781" ignored="false" />
-    <file path="/simulator.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1396905078863" ignored="false" />
+    <file path="/dataReport.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398398621644" ignored="false" />
+    <file path="/simulator.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1399034121095" ignored="false" />
     <file path="/index.html" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1396909320716" ignored="false" />
-    <file path="/base.html" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398388842633" ignored="false" />
-    <file path="/streaming.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398390054669" ignored="false" />
+    <file path="/base.html" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1399029608650" ignored="false" />
+    <file path="/streaming.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398395647425" ignored="false" />
     <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/public/tpl/admin/investor-commited.html" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397709596965" ignored="false" />
     <file path="/investor-commited.html" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1396917617427" ignored="false" />
     <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/public/tpl/admin/member-list.html" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397609837404" ignored="false" />
@@ -31,11 +57,11 @@
     <file path="/HBaseClient.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397858377195" ignored="false" />
     <file path="/fragment.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397729539758" ignored="false" />
     <file path="$PROJECT_DIR$/../hadoop/src/main/java/Parse_SSP.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397015146701" ignored="false" />
-    <file path="/controllers.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398358733484" ignored="false" />
+    <file path="/controllers.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1399032982198" ignored="false" />
     <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/public/tpl/investor/investor-profile.html" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397709596965" ignored="false" />
     <file path="/investor-profile.html" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397285101562" ignored="false" />
     <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/public/js/app/trade/investor.controllers.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397709596965" ignored="false" />
-    <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/routes.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397609837404" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/routes.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398956506808" ignored="false" />
     <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/public/js/framework/vx.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397609837404" ignored="false" />
     <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/public/css/style.css" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397609837404" ignored="false" />
     <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/views/common/header_js.ejs" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397609959363" ignored="false" />
@@ -45,21 +71,21 @@
     <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/config.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397865840024" ignored="false" />
     <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/BizDealBase.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397729411314" ignored="false" />
     <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.api/src/main/java/com/venovate/api/thrift/implement/partials/MemberXServiceImpl.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397729411314" ignored="false" />
-    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/service/MemberService.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397729411314" ignored="false" />
-    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/controller/UserController.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397729411314" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/service/MemberService.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898923" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/controller/UserController.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898923" ignored="false" />
     <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/dao/WatchListDao.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397729411314" ignored="false" />
-    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/controller/MemberController.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397729411314" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/controller/MemberController.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898923" ignored="false" />
     <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.api/src/main/java/com/venovate/api/thrift/implement/JsonXServiceImpl.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397729411314" ignored="false" />
-    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/root/DealBase.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397848184917" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/root/DealBase.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898906" ignored="false" />
     <file path="/DealBase.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397847219449" ignored="false" />
     <file path="$PROJECT_DIR$/../hadoop/src/main/java/UiAudit.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397858112453" ignored="false" />
     <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/setup_app.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397865974069" ignored="false" />
-    <file path="/config.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397865833479" ignored="false" />
+    <file path="/config.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1399033433440" ignored="false" />
     <file path="/setup_app.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397865974069" ignored="false" />
     <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/public/tpl/deal/fund-profile-overview.html" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398353747682" ignored="false" />
     <file path="/fund-profile-overview.html" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397941326451" ignored="false" />
-    <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/public/js/app/trade/deal.controllers.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398353747682" ignored="false" />
-    <file path="/deal.controllers.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397977646830" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/public/js/app/trade/deal.controllers.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398956807208" ignored="false" />
+    <file path="/deal.controllers.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398956807208" ignored="false" />
     <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/public/tpl/deal/company-deal-profile-overview.html" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398353747682" ignored="false" />
     <file path="/company-deal-profile-overview.html" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397977630471" ignored="false" />
     <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/public/tpl/deal/fund-profile-summary.html" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397888883801" ignored="false" />
@@ -70,13 +96,13 @@
     <file path="/fund-manager-profile-overview.html" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397889060505" ignored="false" />
     <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/public/tpl/investor/investor-profile-commitments.html" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397891520600" ignored="false" />
     <file path="/investor-profile-commitments.html" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1397891420191" ignored="false" />
-    <file path="/monitor.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398388603889" ignored="false" />
-    <file path="/serverNodes.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398216486153" ignored="false" />
-    <file path="/common.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398353921085" ignored="false" />
+    <file path="/monitor.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398959506333" ignored="false" />
+    <file path="/serverNodes.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398501760577" ignored="false" />
+    <file path="/common.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1399032555903" ignored="false" />
     <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/app_proxy/biz_thrift/apis/index.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398091842512" ignored="false" />
-    <file path="/routes.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398271083765" ignored="false" />
-    <file path="/services.apis.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398271639483" ignored="false" />
-    <file path="/services.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398271704793" ignored="false" />
+    <file path="/routes.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1399013106484" ignored="false" />
+    <file path="/services.apis.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1399016870414" ignored="false" />
+    <file path="/services.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1399016821519" ignored="false" />
     <file path="/monitorData.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398389847202" ignored="false" />
     <file path="$USER_HOME$/git/SSP_PACKAGE/pom.xml" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398152299133" ignored="false" />
     <file path="$USER_HOME$/git/SSP_PACKAGE/build.xml" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398152299133" ignored="false" />
@@ -84,6 +110,89 @@
     <file path="$USER_HOME$/git/SSP_APP/pom.xml" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398152492256" ignored="false" />
     <file path="$MAVEN_REPOSITORY$/org/apache/struts/xwork/xwork-core/2.3.15.1/xwork-core-2.3.15.1.jar!/com/opensymphony/xwork2/ActionSupport.class" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398179470120" ignored="false" />
     <file path="/underscore.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398232143299" ignored="false" />
+    <file path="/trafficControl.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1399024566575" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/trade/service/TradeService.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898906" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/InvestorSectors.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898906" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/trade/controller/TradeController.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898906" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/InvestorAddress.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898906" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/CompanyInvestorRequest.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898907" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/api/controller/ApiBancboxController.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898907" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/UserPhones.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898907" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/resources/applicationContext-dataaccess.xml" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898907" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/CompanyGeographies.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898907" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/msg/dao/MessageDao.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898907" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/msg/service/MessageService.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898907" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/msg/controller/MessageController.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898907" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/InvestorInvestmentsizes.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898922" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/CompanyInvestorWhitelists.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898922" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/CompanySectors.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898922" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/UserSns.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898922" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/Investor.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898922" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/InvestorGeographies.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898922" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.api/src/test/java/com/venovate/api/JsonXServiceImplTest.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898922" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/CompanyInterests.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898922" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/service/CompanyService.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898922" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/controller/DealController.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898922" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/service/UserService.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898922" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/controller/FundMController.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898922" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/service/DealService.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898923" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/service/FundMService.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898923" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/controller/InvestorController.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898923" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/controller/CompanyController.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898923" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/FundManager.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898923" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/msg/dao/MemberMsgDao.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898923" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/root/MemberBase.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898923" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/asset/controller/AssetController.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898923" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/cms/service/CmsService.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898923" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/cms/controller/CmsController.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898923" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/api/service/ApiBancboxService.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898923" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/dao/BizDealInvestorRequestDao.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898923" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/trade/dao/VtpAccountHoldingsDao.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898923" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/dao/BizDealWhiteListDao.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898923" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/trade/dao/VtpOrdersDao.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898923" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/trade/dao/VtpCancelRequestDao.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898923" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/dao/UserSnsDao.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898924" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/BizDealInvestorRequest.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898924" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/trade/dao/VtpTickerDao.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898924" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/trade/dao/VoBidDao.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898924" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/BizDealWhiteList.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898924" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/trade/dao/VoAuctionDao.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898924" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/trade/dao/VoTransactionLogDao.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898924" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/dao/CompanyDao.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898924" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/trade/entity/VtpTicker.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898924" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/dao/InvestorDao.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898924" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/dao/UserDao.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898924" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/dao/MemberActivityDao.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898924" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/dao/BizDealBaseDao.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898924" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/dao/MemberDao.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898924" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/dao/FundManagerDao.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898924" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/InvestorAssetclasses.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898925" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/sys/controller/SysController.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898925" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/sys/service/SysSettingService.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898925" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/dao/FundDealDao.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898925" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/UserAddress.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898925" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/InvestorBsas.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898925" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/User.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898925" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/InvestorAddresses.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898937" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/MemberActivityRecipient.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898937" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/rpt/service/RptInvestorService.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898937" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/Company.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898937" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/InvestorWebPresence.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898937" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/rpt/dao/RptInvestorDao.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898938" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/InvestorAssetclassesId.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898938" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/CompanyAddress.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898938" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/CompanyRecommendations.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898938" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-middletier/venovate/venovate.ex/src/main/java/com/venovate/ex/modules/base/entity/MemberActivity.java" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398743898938" ignored="false" />
+    <file path="/streamer.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398932643008" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/public/tpl/deal/company-deal-profile.html" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398956145006" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/public/tpl/deal/fund-manager-deal-profile.html" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398956202163" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/controllers/fund.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398956506808" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/controllers/admin.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398956506808" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/app_proxy/biz_thrift/apis/XCompanyApi.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398956506808" ignored="false" />
+    <file path="$USER_HOME$/git/venovate-frontend/v-nodeJs/controllers/business.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398956506808" ignored="false" />
+    <file path="/publisher.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1399034266752" ignored="false" />
+    <file path="/consumer.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1399034223205" ignored="false" />
+    <file path="/test.js" changelist="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" time="1398964221384" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +205,11 @@
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
+  </component>
+  <component name="DatabaseView">
+    <flatten value="false" />
+    <groupTables value="false" />
+    <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
@@ -144,22 +258,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="base.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/masterpage/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="65" selection-start="2004" selection-end="2004" vertical-scroll-proportion="0.35024154">
+            <state line="122" column="45" selection-start="4802" selection-end="4802" vertical-scroll-proportion="-12.958333">
               <folding>
-                <element signature="n#style#0;n#svg#0;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="tag#div#2;tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#2;n#tr#0;n#table#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#3;n#tr#0;n#table#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="streaming.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/streaming.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="68" selection-start="480" selection-end="502" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -167,7 +283,16 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="42" selection-start="1282" selection-end="1282" vertical-scroll-proportion="0.0">
+            <state line="40" column="45" selection-start="872" selection-end="872" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="simulator.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controllers/simulator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="86" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.7687225">
               <folding />
             </state>
           </provider>
@@ -176,62 +301,52 @@
       <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/app/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="75" selection-start="1565" selection-end="1565" vertical-scroll-proportion="0.0">
+            <state line="188" column="22" selection-start="6858" selection-end="6858" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#2161#2610#0" expanded="false" />
+                <element signature="e#736#1012#0" expanded="false" />
+                <element signature="e#1051#2258#0" expanded="false" />
+                <element signature="e#2309#2758#0" expanded="false" />
+                <element signature="e#3304#4079#0" expanded="false" />
+                <element signature="e#4123#5822#0" expanded="false" />
+                <element signature="e#5867#6362#0" expanded="false" />
+                <element signature="e#6525#6614#0" expanded="false" />
+                <element signature="e#7023#7341#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="monitor.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/monitor.js">
+      <file leaf-file-name="consumer.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/consumer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="58" selection-start="739" selection-end="739" vertical-scroll-proportion="0.0">
+            <state line="44" column="52" selection-start="1293" selection-end="1293" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.apis.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/app/services.apis.js">
+      <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="46" selection-start="978" selection-end="978" vertical-scroll-proportion="0.0">
+            <state line="19" column="77" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="monitorData.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/monitorData.js">
+      <file leaf-file-name="logger.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/logger.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="67" selection-start="2228" selection-end="2228" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#2855#3546#0" expanded="false" />
-                <element signature="e#3596#3786#0" expanded="false" />
-                <element signature="e#3846#4327#0" expanded="false" />
-                <element signature="e#4367#4636#0" expanded="false" />
-              </folding>
+            <state line="10" column="70" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/app/services.js">
+      <file leaf-file-name="trafficControl.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/trafficControl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="49" selection-start="4308" selection-end="4308" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#216#3560#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/common.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="54" selection-start="808" selection-end="808" vertical-scroll-proportion="0.0">
+            <state line="91" column="95" selection-start="3420" selection-end="3420" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -244,34 +359,43 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/views/common/header_js.ejs" />
-        <option value="$PROJECT_DIR$/models/dataReport.js" />
-        <option value="$PROJECT_DIR$/models/serverNodes.js" />
-        <option value="$PROJECT_DIR$/node_modules/underscore/underscore.js" />
-        <option value="$PROJECT_DIR$/controllers/simulator.js" />
-        <option value="$PROJECT_DIR$/public/js/app/services.apis.js" />
-        <option value="$PROJECT_DIR$/public/js/app/services.js" />
+        <option value="$PROJECT_DIR$/controllers/streamer.js" />
+        <option value="$PROJECT_DIR$/models/trafficControl.js" />
+        <option value="$PROJECT_DIR$/controllers/test.js" />
         <option value="$PROJECT_DIR$/routes.js" />
-        <option value="$PROJECT_DIR$/controllers/common.js" />
-        <option value="$PROJECT_DIR$/controllers/monitor.js" />
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/public/js/app/controllers.js" />
-        <option value="$PROJECT_DIR$/models/monitorData.js" />
-        <option value="$PROJECT_DIR$/public/js/streaming.js" />
+        <option value="$PROJECT_DIR$/public/js/app/services.js" />
+        <option value="$PROJECT_DIR$/public/js/app/services.apis.js" />
+        <option value="$PROJECT_DIR$/controllers/trafficControl.js" />
         <option value="$PROJECT_DIR$/views/masterpage/base.html" />
+        <option value="$PROJECT_DIR$/controllers/common.js" />
+        <option value="$PROJECT_DIR$/public/js/app/controllers.js" />
+        <option value="$PROJECT_DIR$/framework/logger.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/controllers/simulator.js" />
+        <option value="$PROJECT_DIR$/controllers/consumer.js" />
+        <option value="$PROJECT_DIR$/controllers/publisher.js" />
+        <option value="$PROJECT_DIR$/config.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="-2" />
     <option name="y" value="25" />
-    <option name="width" value="1600" />
-    <option name="height" value="850" />
+    <option name="width" value="1604" />
+    <option name="height" value="854" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -329,133 +453,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="masterpage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="supervisor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="supervisor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="supervisor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="supervisor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="supervisor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="supervisor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="supervisor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="supervisor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="supervisor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="supervisor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="supervisor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="supervisor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="supervisor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="supervisor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="framework" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -480,7 +478,7 @@
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="settings.nodejs" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$USER_HOME$/git/SSP_SHOWADS/src/func.coffee" />
@@ -495,11 +493,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/framework" />
+      <recent name="$PROJECT_DIR$/controllers" />
       <recent name="$PROJECT_DIR$/public/img" />
       <recent name="$PROJECT_DIR$/public/libs" />
-      <recent name="$PROJECT_DIR$/framework" />
       <recent name="$PROJECT_DIR$/proto" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.app.js">
@@ -606,6 +604,23 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="28caf527-5d0f-4a1d-86ab-576db7c9e8dc" name="Default" comment="" />
@@ -615,18 +630,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1600" height="850" extended-state="0" />
+    <frame x="-2" y="25" width="1604" height="854" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28448275" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40714285" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.5228571" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31034482" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26149425" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53846157" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -636,7 +651,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21870968" sideWeight="0.6896552" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21814671" sideWeight="0.69" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29454023" sideWeight="0.636129" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -704,7 +719,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="116" />
+      <option name="time" value="225" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -712,130 +727,139 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/git/SSP_SHOWADS/src/func.coffee">
+    <entry file="file://$PROJECT_DIR$/public/tpl/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="56" selection-start="1740" selection-end="1740" vertical-scroll-proportion="-2.9829545">
-          <folding>
-            <marker date="1398241365236" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1398241365236" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/underscore/underscore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="0" selection-start="3199" selection-end="3199" vertical-scroll-proportion="-4.3333335">
+        <state line="5" column="51" selection-start="101" selection-end="101" vertical-scroll-proportion="0.20891365">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/app/services.apis.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="46" selection-start="978" selection-end="978" vertical-scroll-proportion="0.0">
+        <state line="34" column="108" selection-start="911" selection-end="911" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/app/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="49" selection-start="4308" selection-end="4308" vertical-scroll-proportion="0.0">
+        <state line="137" column="36" selection-start="4954" selection-end="4954" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/trafficControl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="73" selection-start="894" selection-end="894" vertical-scroll-proportion="0.02077922">
           <folding>
-            <element signature="e#216#3560#0" expanded="false" />
+            <element signature="e#539#635#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="286" column="12" selection-start="6309" selection-end="6309" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="4" selection-start="452" selection-end="452" vertical-scroll-proportion="0.53608245">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/serverNodes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="87" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.4089347">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="54" selection-start="808" selection-end="808" vertical-scroll-proportion="0.0">
+        <state line="34" column="81" selection-start="1099" selection-end="1099" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/simulator.js">
+    <entry file="file://$PROJECT_DIR$/controllers/trafficControl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="30" selection-start="719" selection-end="719" vertical-scroll-proportion="0.71153843">
+        <state line="91" column="95" selection-start="3420" selection-end="3420" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/consumer.js">
+    <entry file="file://$PROJECT_DIR$/public/js/app/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.9230769">
+        <state line="188" column="22" selection-start="6858" selection-end="6858" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#736#1012#0" expanded="false" />
+            <element signature="e#1051#2258#0" expanded="false" />
+            <element signature="e#2309#2758#0" expanded="false" />
+            <element signature="e#3304#4079#0" expanded="false" />
+            <element signature="e#4123#5822#0" expanded="false" />
+            <element signature="e#5867#6362#0" expanded="false" />
+            <element signature="e#6525#6614#0" expanded="false" />
+            <element signature="e#7023#7341#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-client/components/learnboost-engine.io-client/lib/transports/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="24" selection-start="744" selection-end="744" vertical-scroll-proportion="0.3316062">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/monitor.js">
+    <entry file="file://$PROJECT_DIR$/framework/logger.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="58" selection-start="739" selection-end="739" vertical-scroll-proportion="0.0">
+        <state line="10" column="70" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="42" selection-start="1282" selection-end="1282" vertical-scroll-proportion="0.0">
+        <state line="40" column="45" selection-start="872" selection-end="872" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/monitorData.js">
+    <entry file="file://$PROJECT_DIR$/controllers/publisher.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="67" selection-start="2228" selection-end="2228" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#2855#3546#0" expanded="false" />
-            <element signature="e#3596#3786#0" expanded="false" />
-            <element signature="e#3846#4327#0" expanded="false" />
-            <element signature="e#4367#4636#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="75" selection-start="1565" selection-end="1565" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#2161#2610#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/streaming.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="68" selection-start="480" selection-end="502" vertical-scroll-proportion="0.0">
+        <state line="40" column="52" selection-start="1148" selection-end="1148" vertical-scroll-proportion="0.37046632">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/masterpage/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="65" selection-start="2004" selection-end="2004" vertical-scroll-proportion="0.35024154">
+        <state line="122" column="45" selection-start="4802" selection-end="4802" vertical-scroll-proportion="-12.958333">
           <folding>
-            <element signature="n#style#0;n#svg#0;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="tag#div#2;tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#0;n#table#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#3;n#tr#0;n#table#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/streamer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="15" selection-start="774" selection-end="774" vertical-scroll-proportion="0.80569947">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/consumer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="52" selection-start="1293" selection-end="1293" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="77" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/simulator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="86" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.7687225">
+          <folding />
         </state>
       </provider>
     </entry>
