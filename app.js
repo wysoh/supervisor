@@ -8,6 +8,7 @@ var http = require('http');
 var path = require('path');
 var routes = require("./routes");
 var logger = require('./framework/logger');
+var config = require('./config').config;
 
 
 expressExt = require('./framework/express.ext/express.extend');
@@ -29,6 +30,8 @@ app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+
+
 
 // development only
 if ('development' == app.get('env')) {
@@ -54,8 +57,11 @@ new streamer().run(io);
 var events = require('events');
 eventEmitter = new events.EventEmitter();
 
-var simulator = require('./controllers/simulator');
-new simulator().run();
+if (config.env == 'dev'){
+    var simulator = require('./controllers/simulator');
+    new simulator().run();
+}
+
 
 var monitorController = require('./controllers/monitor');
 new monitorController().run();
