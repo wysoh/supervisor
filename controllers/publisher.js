@@ -35,8 +35,11 @@ module.exports = (function(){
         });
 
         self.on('exchangeReady', function(ex){
+            if (this.isReady){
+                return;
+            }
             self.exchange = ex;
-            this.isReady = true;
+            self.isReady = true;
             logs.debug('Publisher for exchange: ' + self.exchange.name + ' is open.');
         });
     }
@@ -44,11 +47,13 @@ module.exports = (function(){
     publisher.prototype.publish = function(routingKey, data){
         if(this.isReady)
         {
+            logs.debug('Publish message to exchange: ' + this.exchange.name);
             this.exchange.publish(routingKey, data);
         }
         else
         {
             this.on('exchangeReady', function(){
+                logs.debug('Publish message to exchange: ' + this.exchange.name);
                 this.exchange.publish(routingKey, data);
             })
         }

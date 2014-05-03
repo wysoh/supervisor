@@ -35,8 +35,11 @@ module.exports = (function(){
         });
 
         self.on('exchangeReady', function(ex){
+            if (self.isReady){
+                return;
+            }
             self.exchange = ex;
-            //self.isExchangeReady = true;
+            self.isReady = true;
             logs.debug('Consumer for exchange: ' + self.exchange.name + ' is open.');
         })
     }
@@ -50,8 +53,10 @@ module.exports = (function(){
     };
 
     consumer.prototype.consume = function(callback){
-        this.on('queueReady', function(){
-            this.queue.subscribe(function(message, headers, deliveryInfo, messageObject){
+        var self = this;
+        self.on('queueReady', function(){
+            self.queue.subscribe(function(message, headers, deliveryInfo, messageObject){
+                logs.debug('Receive message on exchange: ' + self.exchange.name);
                 callback(message);
             })
         })
