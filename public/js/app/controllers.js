@@ -54,7 +54,9 @@ angular.module('allyes.controllers.common', []).
 
                         vm.selectedServerGroup = vm.tabs.tabItems[0].code;
                         fn.buildSecondTabs(vm.tabs.tabItems[0].nodes);
-                        vm.selectedServerInstance = vm.secondTabs.tabItems[0].code;
+                        if (vm.selectedServerInstance = vm.secondTabs.tabItems.length > 0){
+                            vm.selectedServerInstance = vm.secondTabs.tabItems[0].code;
+                        }
 
                         fn.initChart();
                         fn.initStreaming();
@@ -84,7 +86,10 @@ angular.module('allyes.controllers.common', []).
                 tabItem.onSelect();
                 vm.selectedServerGroup = tabItem.code;
                 fn.buildSecondTabs(tabItem.nodes);
-                vm.selectedServerInstance = vm.secondTabs.tabItems[0].code;
+                if (vm.selectedServerInstance = vm.secondTabs.tabItems.length > 0){
+                    vm.selectedServerInstance = vm.secondTabs.tabItems[0].code;
+                }
+
                 fn.initChart();
             };
 

@@ -49,6 +49,7 @@ module.exports = (function() {
 
             if (message){
                 publisher.publish(routingKey, trafficControlData.toProto({serverTrafficControlData:[message]}));
+                logs.info("send traffic control data: " + JSON.stringify({serverTrafficControlData:[message]}));
             }
 
 
@@ -63,8 +64,11 @@ module.exports = (function() {
         var currentTimeout = 0;
 
         if (update.sg == 'dsp'){
+            //these are all the error codes we consider for traffic control
+            var dspErrorCodes = ["1000", "2022", "2027", "2028"];
+
             _.each(Object.keys(update), function(v, i){
-                if (!_.isNaN(parseInt(v))){
+                if (!_.isNaN(parseInt(v)) && _.contains(dspErrorCodes, v) ){
                     currentTimeout += update[v].y;
                 }
             })
@@ -83,7 +87,14 @@ module.exports = (function() {
         //the ratio is calculated in the way that, when we're trying to throttle it down, we want to pull it down harder than
         //expected, here "expected" means targetQps/CurrentQps.By doing a power, we ensure to react to overwhelming traffic, normally
         //would keep rising after reaching the limit
-        var targetRatio = Math.floor(Math.pow(targetQps / currentQps, 2) * 100);
+
+        if (currentQps == 0 || targetQps >= currentQps)
+        {
+            var targetRatio = 100;
+        }else{
+            var targetRatio = Math.floor(Math.pow(targetQps / currentQps, 2) * 100);
+        }
+
 
 
         //the next case is that after previous throttling, the QPS drops quickly and servers are back to normal
@@ -93,12 +104,13 @@ module.exports = (function() {
         //we use a heuristic setting that it will take 5 steps to reach the calculated target ratio
 
         targetRatio = targetRatio > currentRatio ?
-            currentRatio + Math.floor((targetRatio - currentRatio) / 5) :
+            currentRatio + Math.ceil((targetRatio - currentRatio) / 5) :
             targetRatio;
 
-        trafficControlData.setRatio(update.sg, update.si, targetRatio, currentQps);
-
-        eventEmitter.emit('control', {sg: update.sg, si: update.si, ts: Math.floor(Date.now()/1000), ratio: targetRatio, qps: currentQps, timeout:currentTimeout});
+        //if (targetRatio != 100){ //(targetRatio != currentRatio){
+            trafficControlData.setRatio(update.sg, update.si, targetRatio, currentQps);
+            eventEmitter.emit('control', {sg: update.sg, si: update.si, ts: Math.floor(Date.now()/1000), ratio: targetRatio, qps: currentQps, timeout:currentTimeout});
+        //}
 
     }
 

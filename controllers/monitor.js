@@ -24,19 +24,27 @@ module.exports = (function(){
         var nodes = new serverNodes();
         var monitorModelData = new monitorModel();
 
-        c.init('monitor_ex');
-        c.setupQueue('monitor', '',{autoDelete:false});
+        c.init('monitor_ex', 'fanout');
+        c.setupQueue('monitor', '',{autoDelete:true});
+
 
         c.consume(function(message){
-            var data = report.fromProto(message.data);
-            nodes.addNode(data);
+            try{
+                var data = report.fromProto(message.data);
+                logs.debug('Receive Monitor data: ' + JSON.stringify(data));
 
-            //returns the current data
-            var update = monitorModelData.addData(data);
+                nodes.addNode(data);
 
-            _.each(update, function(v, i){
-                eventEmitter.emit('update', v);
-            });
+                //returns the current data
+                var update = monitorModelData.addData(data);
+
+                _.each(update, function(v, i){
+                    eventEmitter.emit('update', v);
+                });
+            }catch(ex){
+                logs.error(ex.source);
+            }
+
         });
     };
 

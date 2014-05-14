@@ -52,7 +52,7 @@ module.exports = (function(){
         ts = ts.getTime() - ts.getSeconds() * 1000;
 
         var sg = tick.serverGroup,
-            si = tick.serverId.split('-')[0];
+            si = tick.serverId.split(':')[0];
 
         var entry;
         if (sg == 'dspclient'){
@@ -64,7 +64,7 @@ module.exports = (function(){
                 }
 
                 //for dsp client, there's only qps number on the top level, no timeout
-                updateValueByTimestamp(entry, "qps", ts, tick.qps);
+                updateValueByTimestamp(entry, "qps", ts, v.qps);
 
                 //now update the individual error codes
                 _.each(v.errorMessage, function(v, i){
@@ -122,7 +122,6 @@ module.exports = (function(){
         return ret;
 
     }
-
 
     var initEmptyServerEntry = function(sg, server){
 

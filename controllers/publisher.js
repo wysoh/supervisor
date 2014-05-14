@@ -24,12 +24,31 @@ module.exports = (function(){
 
     publisher.prototype.init = function(exchange_name, type){
         var self = this;
+
+        /*
         self.connection = amqp.createConnection({host: conf.rabbit.host}, null, function(){
             self.emit('connectionReady');
         });
+        */
+
+        self.connection = amqp.createConnection({host: conf.rabbit.host});
+
+        self.connection.on('error', function(ex){
+            console.log(ex);
+        });
+
+
+        self.connection.on('ready', function(){
+            //logs.debug('connection ready');
+            self.isReady = false;
+            self.emit('connectionReady');
+
+        });
 
         self.on('connectionReady', function(){
-            self.connection.exchange(exchange_name, {type:type?type:'direct'}, function(ex){
+            self.isReady = false;
+
+            self.connection.exchange(exchange_name, {type:type?type:'direct', autoDelete:false, noDeclare:true}, function(ex){
                 self.emit('exchangeReady', ex);
             })
         });
@@ -53,7 +72,7 @@ module.exports = (function(){
         else
         {
             this.on('exchangeReady', function(){
-                logs.debug('Publish message to exchange: ' + this.exchange.name);
+                logs.debug('Publish  message to exchange: ' + this.exchange.name);
                 this.exchange.publish(routingKey, data);
             })
         }

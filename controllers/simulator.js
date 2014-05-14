@@ -38,7 +38,8 @@ module.exports = (function(){
 
     var doRun = function(pub, report){
         setTimeout(function(){
-                pub.publish("", report.toProto(report.getSample()));
+                var sample = report.getSample();
+                pub.publish("", report.toProto(sample));
                 doRun(pub, report);
             },
             2000);

@@ -1,0 +1,24 @@
+message ui_audit_t
+{
+	repeated creative_message_t creative_messages=1;
+}
+
+message creative_message_t
+{
+	repeated creative_t creatives=1;
+}
+
+message creative_t
+{
+	required string crid=1;
+	optional int32 w=2;
+	optional int32 h=3;
+	optional string cat=4;
+	repeated string domains=5;
+	optional string buyerid=6;
+	optional int32 creativefmt=7;
+	optional int32 audittype=8;
+	optional int32 update=9;
+	optional string adm=10;
+	optional string adspace=11;
+}

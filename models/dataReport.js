@@ -20,7 +20,11 @@ module.exports = (function(){
     };
 
     dataReport.prototype.fromProto = function(proto){
-        return serializer.parse(proto);
+        try{
+            return serializer.parse(proto);
+        }catch(ex){
+            logs.error('Parse dataReport PB failed: ' + JSON.stringify(ex));
+        }
 
     };
 
@@ -46,19 +50,20 @@ module.exports = (function(){
             timeout: Math.floor(1000 + Math.random() * 1000),
             dspMessage: [
                 {dspId: dsp,
-                    qps: Math.floor(Math.random()* 5000),
+                    qps: 0, //Math.floor(Math.random()* 5000),
                     errorMessage:[
-                        {errorCode: errorcodes[Math.floor(Math.random() * 100) % 4], num:234},
-                        {errorCode: errorcodes[Math.floor(Math.random() * 100) % 4], num: 456}
-                    ]
-                },
-                {dspId: dsps[Math.floor(Math.random() * 100) % 4],
-                    qps: Math.floor(Math.random()* 5000),
-                    errorMessage:[
-                        {errorCode: errorcodes[Math.floor(Math.random() * 100) % 4], num:234},
-                        {errorCode: errorcodes[Math.floor(Math.random() * 100) % 4], num: 456}
+                        {errorCode: errorcodes[Math.floor(Math.random() * 100) % 4], num:0}
+                        //,{errorCode: errorcodes[Math.floor(Math.random() * 100) % 4], num: 456}
                     ]
                 }
+                /*
+                ,{dspId: dsps[Math.floor(Math.random() * 100) % 4],
+                    qps: Math.floor(Math.random()* 5000),
+                    errorMessage:[
+                        {errorCode: errorcodes[Math.floor(Math.random() * 100) % 4], num:234},
+                        {errorCode: errorcodes[Math.floor(Math.random() * 100) % 4], num: 456}
+                    ]
+                }*/
             ]
         }
 

@@ -24,12 +24,33 @@ module.exports = (function(){
     consumer.prototype.init = function(exchange_name, type){
 
         var self = this;
-        self.connection = amqp.createConnection({host: conf.rabbit.host}, null, function(){
+
+        /*
+        self.connection = amqp.createConnection({host: conf.rabbit.host},function(){
+            logs.debug('connection ready');
+            self.emit('connectionReady');
+        });
+        */
+
+        self.connection = amqp.createConnection({host: conf.rabbit.host});
+
+        self.connection.on('error', function(ex){
+            console.log(ex);
+        });
+
+
+        self.connection.on('ready', function(){
+            //logs.debug('connection ready');
             self.emit('connectionReady');
         });
 
+
         self.on('connectionReady', function(){
-            self.connection.exchange(exchange_name, {type:type?type:'direct'}, function(ex){
+            //logs.debug('b4 connection ready');
+            self.isReady = false;
+
+            self.connection.exchange(exchange_name, {type:type?type:'direct', autoDelete:false, noDeclare:true}, function(ex){
+                //logs.debug('exchange ready');
                 self.emit('exchangeReady', ex);
             })
         });
@@ -56,7 +77,7 @@ module.exports = (function(){
         var self = this;
         self.on('queueReady', function(){
             self.queue.subscribe(function(message, headers, deliveryInfo, messageObject){
-                logs.debug('Receive message on exchange: ' + self.exchange.name);
+                //logs.debug('Receive message on exchange: ' + self.exchange.name);
                 callback(message);
             })
         })

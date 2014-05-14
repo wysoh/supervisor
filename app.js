@@ -50,12 +50,43 @@ server.listen(app.get('port'), function(){
    console.log('Express server listening on port ' + app.get('port'));
 });
 
-var streamer = require('./controllers/streamer');
-new streamer().run(io);
+//process.env['NODE_DEBUG_AMQP'] = true;
 
 
 var events = require('events');
 eventEmitter = new events.EventEmitter();
+
+
+/*
+var consumer = require('./controllers/consumer');
+var c = new consumer();
+c.init('ui_ex', 'direct');
+c.setupQueue('ui', 'audit', {autoDelete: true});
+
+var audit = require('./models/creative_audit');
+var a = new audit();
+
+var buffer = new Buffer('Ch0KEjM2MC1jcmVhdGl2ZS16Z3cwNTIDMzYwQABSAAodChIzNjEtY3JlYXRpdmUtemd3MDYyAzM2MUAAUgA=', 'base64');
+var m = a.fromProto(buffer);
+return;
+
+
+c.consume(function(message){
+
+    var data = a.fromProto(message.data);
+    //logs.debug(message.data.toString('base64');
+    //new Buffer('Ch0KEjM2MC1jcmVhdGl2ZS16Z3cwNTIDMzYwQABSAAodChIzNjEtY3JlYXRpdmUtemd3MDYyAzM2MUAAUgA=', 'base64')
+
+    logs.debug(JSON.stringify(data));
+
+})
+
+return;
+ */
+
+
+var streamer = require('./controllers/streamer');
+new streamer().run(io);
 
 if (config.env == 'dev'){
     var simulator = require('./controllers/simulator');
@@ -68,7 +99,4 @@ new monitorController().run();
 
 var trafficControl = require('./controllers/trafficControl');
 new trafficControl().run();
-
-
-
 
