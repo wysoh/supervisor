@@ -14,4 +14,7 @@ sudo yum install python26
 npm install --python=python26
 
 - test
-- test 
+- test
+
+ * test
+ * test
