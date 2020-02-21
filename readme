@@ -13,6 +13,11 @@ The protobuf module for node is expecting the header files in the right place, m
 sudo yum install python26
 npm install --python=python26
 
+```
+test
+
+```
+
 - test
 - test
 
