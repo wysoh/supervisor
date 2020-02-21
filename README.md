@@ -14,7 +14,26 @@ sudo yum install python26
 npm install --python=python26
 
 ```
-test
+conn Tunnel1
+authby=secret
+auto=start
+left=%defaultroute
+leftid=<customer_gw1_ip>
+right=<vpn_gw_ip>
+type=tunnel
+ikelifetime=8h
+keylife=1h
+phase2alg=aes128-sha1;modp1024
+ike=aes128-sha1;modp1024
+auth=esp
+keyingtries=%forever
+keyexchange=ike
+leftsubnet=<LOCAL NETWORK>
+rightsubnet=<REMOTE NETWORK>
+dpddelay=10
+dpdtimeout=30
+dpdaction=restart_by_peer
+
 
 ```
 
